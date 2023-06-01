@@ -21,19 +21,14 @@
         </div>
       </section>
     </section>
-    <section class="gradient-img-section">
+    <section class="gradient-img-section" id="gradient-section">
       <div class="triangle-container">
-        <!-- <img
-          class="triangale"
-          alt="Background Triangale"
-          src="/images/bg-triangle.svg"
-        /> -->
-
         <div class="first-two-imgs">
           <button class="choice-btn" value="paper">
             <div class="img-common img1">
               <img
                 class="hand"
+                id="paper-img"
                 alt="Hand symbol"
                 src="/images/icon-paper.svg"
               />
@@ -43,6 +38,7 @@
             <div class="img-common img2">
               <img
                 class="scissors"
+                id="scissor-img"
                 alt="Hand symbol"
                 src="/images/icon-scissors.svg"
               />
@@ -58,10 +54,54 @@
         </div>
       </div>
     </section>
-    <section class="rules-container">
+    <section class="rules-container" id="rule-section">
       <div class="rules-div">
         <button class="rules" value="rules">Rules</button>
       </div>
     </section>
+
+    <section class="after-click-container" id="next-page-container">
+      <div class="column-one">
+        <span class="picked-you">you picked</span>
+        <button class="choice-btn" value="paper">
+          <div class="img-common img11">
+            <img
+              class="hand1"
+              id="paper-img1"
+              alt="Hand symbol"
+              src="/images/icon-paper.svg"
+            />
+          </div>
+        </button>
+      </div>
+      <div class="column-two">
+        <span class="text-picked">the house picked</span>
+        <button class="choice-btn" value="paper">
+          <div class="circle-gradient"></div>
+        </button>
+      </div>
+    </section>
+
+    <section class="after-click-container" id="next-page-container2">
+      <div class="column-one">
+        <span class="picked-you">you picked</span>
+        <button class="choice-btn" value="Scissors">
+          <div class="img-common img22">
+            <img
+              class="scissors"
+              alt="Hand symbol"
+              src="/images/icon-scissors.svg"
+            />
+          </div>
+        </button>
+      </div>
+      <div class="column-two">
+        <span class="text-picked">the house picked</span>
+        <button class="choice-btn" value="paper">
+          <div class="circle-gradient"></div>
+        </button>
+      </div>
+    </section>
+    <script src="script.js"></script>
   </body>
 </html>
