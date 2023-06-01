@@ -31,3 +31,10 @@ document.getElementById("rock-img").addEventListener("click", function () {
   ruleSection.style.display = "none";
   containerFour.style.display = "flex";
 });
+
+document.getElementById("exit-overlay").addEventListener("click", function () {
+  let containerOne = document.getElementById("gradient-section");
+  containerOne.style.display = "flex";
+  let overlayContainer = document.getElementById("overlay-container");
+  overlayContainer.style.display = "none";
+});
