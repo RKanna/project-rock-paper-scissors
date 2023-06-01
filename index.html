@@ -8,6 +8,17 @@
     <title>ROCK || PAPER || SCISSORS</title>
   </head>
   <body>
+    <section class="overlay-img-container">
+      <div class="img-layer-container">
+        <div class="img-rule-container">
+          <img
+            class="rules-webload"
+            alt="Rules for the game"
+            src="/images/image-rules.svg"
+          />
+        </div>
+      </div>
+    </section>
     <section class="heading-container">
       <section class="score-title-container">
         <div class="score-and-title">
@@ -48,7 +59,12 @@
         <div class="individual-img">
           <button class="choice-btn" value="Rock">
             <div class="img-common img3">
-              <img class="rock" alt="Rock symbol" src="/images/icon-rock.svg" />
+              <img
+                class="rock"
+                id="rock-img"
+                alt="Rock symbol"
+                src="/images/icon-rock.svg"
+              />
             </div>
           </button>
         </div>
@@ -92,6 +108,23 @@
               alt="Hand symbol"
               src="/images/icon-scissors.svg"
             />
+          </div>
+        </button>
+      </div>
+      <div class="column-two">
+        <span class="text-picked">the house picked</span>
+        <button class="choice-btn" value="paper">
+          <div class="circle-gradient"></div>
+        </button>
+      </div>
+    </section>
+
+    <section class="after-click-container" id="next-page-container3">
+      <div class="column-one">
+        <span class="picked-you">you picked</span>
+        <button class="choice-btn" value="Rock">
+          <div class="img-common img33">
+            <img class="rock" alt="Rock symbol" src="/images/icon-rock.svg" />
           </div>
         </button>
       </div>
