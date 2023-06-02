@@ -334,6 +334,28 @@ body {
   border: none;
   cursor: pointer;
 }
+.win-or-lose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+.you-win {
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  color: white;
+}
+.btn-win {
+  padding: 0.8rem 3.8rem 0.8rem 3.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+.element-win-lose {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (max-width: 998px) {
   .score-and-title {
     gap: 1rem;
