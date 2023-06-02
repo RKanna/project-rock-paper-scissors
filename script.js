@@ -75,10 +75,14 @@ document.getElementById("paper-img").addEventListener("click", function () {
     elementPaper.style.display = "none";
     elementScissors.style.display = "flex";
     elementRock.style.display = "none";
+    let containerWinOrLose2 = document.getElementById("clickdisappear2");
+    containerWinOrLose2.style.display = "flex";
   } else if (randomNum === 3) {
     elementPaper.style.display = "none";
     elementScissors.style.display = "none";
     elementRock.style.display = "flex";
+    let containerWinOrLose = document.getElementById("clickdisappear");
+    containerWinOrLose.style.display = "flex";
   }
 });
 let btnPaper = document.getElementById("element-paper");
@@ -130,15 +134,25 @@ document.getElementById("rock-img").addEventListener("click", function () {
     elementRock3.style.display = "flex";
   }
 });
-function homePageFunction() {
-  let containerOne = document.getElementById("gradient-section");
-  containerOne.style.display = "flex";
-  let containerTwo = document.getElementById("next-page-container");
-  containerTwo.style.display = "none";
-  let containerThree = document.getElementById("next-page-container2");
-  containerThree.style.display = "none";
-  let containerFour = document.getElementById("next-page-container3");
-  containerFour.style.display = "none";
-  let ruleSection = document.getElementById("rule-section");
-  ruleSection.style.display = "flex";
+function homePageFunction(event) {
+  const overlay = document.getElementById("overlay-container");
+
+  // Check if the overlay has an active state
+  if (!overlay.classList.contains("active")) {
+    location.reload(); // Reload the page
+  } else {
+    event.preventDefault(); // Prevent the default anchor behavior
+  }
+  overlay.style.display = "none";
 }
+window.addEventListener("load", function () {
+  const overlay = document.getElementById("overlay-container");
+
+  if (!sessionStorage.getItem("pageLoaded")) {
+    // Show the overlay on first page load
+    overlay.style.display = "block";
+
+    // Set the flag in sessionStorage
+    sessionStorage.setItem("pageLoaded", "true");
+  }
+});
