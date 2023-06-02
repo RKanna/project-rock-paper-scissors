@@ -353,8 +353,11 @@ body {
   cursor: pointer;
 }
 .element-win-lose {
+  margin-top: -5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 998px) {
   .score-and-title {
