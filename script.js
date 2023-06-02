@@ -8,6 +8,8 @@ let containerWinOrLose = document.getElementById("clickdisappear");
 containerWinOrLose.style.display = "none";
 let containerWinOrLose2 = document.getElementById("clickdisappear2");
 containerWinOrLose2.style.display = "none";
+let containerWinOrLose3 = document.getElementById("clickdisappear3");
+containerWinOrLose3.style.display = "none";
 let elementScissors = document.getElementById("element-scissors");
 let elementRock = document.getElementById("element-rock");
 let elementPaper = document.getElementById("element-paper");
@@ -71,6 +73,8 @@ document.getElementById("paper-img").addEventListener("click", function () {
     elementPaper.style.display = "flex";
     elementScissors.style.display = "none";
     elementRock.style.display = "none";
+    let containerWinOrLose3 = document.getElementById("clickdisappear3");
+    containerWinOrLose3.style.display = "flex";
   } else if (randomNum === 2) {
     elementPaper.style.display = "none";
     elementScissors.style.display = "flex";
@@ -100,14 +104,20 @@ document.getElementById("scissor-img").addEventListener("click", function () {
     elementPaper2.style.display = "flex";
     elementScissors2.style.display = "none";
     elementRock2.style.display = "none";
+    let containerWinOrLose = document.getElementById("clickdisappear");
+    containerWinOrLose.style.display = "flex";
   } else if (randomNum === 2) {
     elementPaper2.style.display = "none";
     elementScissors2.style.display = "flex";
     elementRock2.style.display = "none";
+    let containerWinOrLose3 = document.getElementById("clickdisappear3");
+    containerWinOrLose3.style.display = "flex";
   } else if (randomNum === 3) {
     elementPaper2.style.display = "none";
     elementScissors2.style.display = "none";
     elementRock2.style.display = "flex";
+    let containerWinOrLose2 = document.getElementById("clickdisappear2");
+    containerWinOrLose2.style.display = "flex";
   }
 });
 
@@ -124,19 +134,26 @@ document.getElementById("rock-img").addEventListener("click", function () {
     elementPaper3.style.display = "flex";
     elementScissors3.style.display = "none";
     elementRock3.style.display = "none";
+    let containerWinOrLose2 = document.getElementById("clickdisappear2");
+    containerWinOrLose2.style.display = "flex";
   } else if (randomNum === 2) {
     elementPaper3.style.display = "none";
     elementScissors3.style.display = "flex";
     elementRock3.style.display = "none";
+    let containerWinOrLose = document.getElementById("clickdisappear");
+    containerWinOrLose.style.display = "flex";
   } else if (randomNum === 3) {
     elementPaper3.style.display = "none";
     elementScissors3.style.display = "none";
     elementRock3.style.display = "flex";
+    let containerWinOrLose3 = document.getElementById("clickdisappear3");
+    containerWinOrLose3.style.display = "flex";
   }
 });
 function homePageFunction(event) {
   const overlay = document.getElementById("overlay-container");
   overlay.style.display = "none";
+  overlay.classList.add("hidden");
 
   event.preventDefault();
   sessionStorage.setItem("hideOverlay", "true");
@@ -148,5 +165,6 @@ window.addEventListener("load", function () {
   const hideOverlay = sessionStorage.getItem("hideOverlay");
   if (hideOverlay === "true") {
     overlay.style.display = "none";
+    overlay.classList.remove("hidden");
   }
 });
