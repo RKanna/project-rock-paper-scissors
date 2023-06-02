@@ -19,6 +19,7 @@ let elementPaper2 = document.getElementById("element-paper2");
 let elementScissors3 = document.getElementById("element-scissors3");
 let elementRock3 = document.getElementById("element-rock3");
 let elementPaper3 = document.getElementById("element-paper3");
+let buttonWin = document.getElementById("win-btn");
 
 let columnTwo = document.getElementById("column-two");
 columnTwo.style.display = "flex";
@@ -168,3 +169,21 @@ window.addEventListener("load", function () {
     overlay.classList.remove("hidden");
   }
 });
+function winLooseDraw() {
+  let containerOne = document.getElementById("gradient-section");
+  containerOne.style.display = "flex";
+  let containerTwo = document.getElementById("next-page-container");
+  containerTwo.style.display = "none";
+  let containerThree = document.getElementById("next-page-container2");
+  containerThree.style.display = "none";
+  let containerFour = document.getElementById("next-page-container3");
+  containerFour.style.display = "none";
+  let ruleSection = document.getElementById("rule-section");
+  ruleSection.style.display = "flex";
+  let containerWinOrLose = document.getElementById("clickdisappear");
+  containerWinOrLose.style.display = "none";
+  let containerWinOrLose2 = document.getElementById("clickdisappear2");
+  containerWinOrLose2.style.display = "none";
+  let containerWinOrLose3 = document.getElementById("clickdisappear3");
+  containerWinOrLose3.style.display = "none";
+}
