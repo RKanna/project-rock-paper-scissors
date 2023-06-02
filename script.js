@@ -130,3 +130,15 @@ document.getElementById("rock-img").addEventListener("click", function () {
     elementRock3.style.display = "flex";
   }
 });
+function homePageFunction() {
+  let containerOne = document.getElementById("gradient-section");
+  containerOne.style.display = "flex";
+  let containerTwo = document.getElementById("next-page-container");
+  containerTwo.style.display = "none";
+  let containerThree = document.getElementById("next-page-container2");
+  containerThree.style.display = "none";
+  let containerFour = document.getElementById("next-page-container3");
+  containerFour.style.display = "none";
+  let ruleSection = document.getElementById("rule-section");
+  ruleSection.style.display = "flex";
+}
