@@ -383,4 +383,7 @@ body {
   .after-click-container {
     gap: 3rem;
   }
+  .element-win-lose {
+    margin-top: 0.5rem;
+  }
 }
