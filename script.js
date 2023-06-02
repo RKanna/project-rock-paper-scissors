@@ -136,23 +136,17 @@ document.getElementById("rock-img").addEventListener("click", function () {
 });
 function homePageFunction(event) {
   const overlay = document.getElementById("overlay-container");
-
-  // Check if the overlay has an active state
-  if (!overlay.classList.contains("active")) {
-    location.reload(); // Reload the page
-  } else {
-    event.preventDefault(); // Prevent the default anchor behavior
-  }
   overlay.style.display = "none";
+
+  event.preventDefault();
+  sessionStorage.setItem("hideOverlay", "true");
+
+  location.reload();
 }
 window.addEventListener("load", function () {
   const overlay = document.getElementById("overlay-container");
-
-  if (!sessionStorage.getItem("pageLoaded")) {
-    // Show the overlay on first page load
-    overlay.style.display = "block";
-
-    // Set the flag in sessionStorage
-    sessionStorage.setItem("pageLoaded", "true");
+  const hideOverlay = sessionStorage.getItem("hideOverlay");
+  if (hideOverlay === "true") {
+    overlay.style.display = "none";
   }
 });
