@@ -4,7 +4,10 @@ let containerThree = document.getElementById("next-page-container2");
 containerThree.style.display = "none";
 let containerFour = document.getElementById("next-page-container3");
 containerFour.style.display = "none";
-
+let containerWinOrLose = document.getElementById("clickdisappear");
+containerWinOrLose.style.display = "none";
+let containerWinOrLose2 = document.getElementById("clickdisappear2");
+containerWinOrLose2.style.display = "none";
 document.getElementById("paper-img").addEventListener("click", function () {
   let containerOne = document.getElementById("gradient-section");
   let containerTwo = document.getElementById("next-page-container");
@@ -38,3 +41,13 @@ document.getElementById("exit-overlay").addEventListener("click", function () {
   let overlayContainer = document.getElementById("overlay-container");
   overlayContainer.style.display = "none";
 });
+document.getElementById("rule-btn-main").addEventListener("click", function () {
+  let OverlayContainerMain = document.getElementById("overlay-container");
+  OverlayContainerMain.style.display = "flex";
+});
+
+function randomNumFunction() {
+  let randomNumber = Math.ceil(Math.random() * 3);
+  console.log(randomNumber);
+}
+let randomNum = randomNumFunction();
