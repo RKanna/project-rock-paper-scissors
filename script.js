@@ -82,7 +82,9 @@ document.getElementById("paper-img").addEventListener("click", function () {
     elementRock.style.display = "none";
     let containerWinOrLose2 = document.getElementById("clickdisappear2");
     containerWinOrLose2.style.display = "flex";
-  } else if (randomNum === 3) {
+  } else if (paperDefault == 1 && randomNum === 3) {
+    score++;
+    document.getElementById("score-main").textContent = score;
     elementPaper.style.display = "none";
     elementScissors.style.display = "none";
     elementRock.style.display = "flex";
@@ -101,7 +103,9 @@ document.getElementById("scissor-img").addEventListener("click", function () {
   containerAnother.style.display = "flex";
   let randomNum = Math.ceil(Math.random() * 3);
   console.log(randomNum);
-  if (randomNum === 1) {
+  if (scissorsDefault == 2 && randomNum === 1) {
+    score++;
+    document.getElementById("score-main").textContent = score;
     elementPaper2.style.display = "flex";
     elementScissors2.style.display = "none";
     elementRock2.style.display = "none";
@@ -137,7 +141,9 @@ document.getElementById("rock-img").addEventListener("click", function () {
     elementRock3.style.display = "none";
     let containerWinOrLose2 = document.getElementById("clickdisappear2");
     containerWinOrLose2.style.display = "flex";
-  } else if (randomNum === 2) {
+  } else if (rockDefault == 3 && randomNum === 2) {
+    score++;
+    document.getElementById("score-main").textContent = score;
     elementPaper3.style.display = "none";
     elementScissors3.style.display = "flex";
     elementRock3.style.display = "none";
@@ -187,3 +193,12 @@ function winLooseDraw() {
   let containerWinOrLose3 = document.getElementById("clickdisappear3");
   containerWinOrLose3.style.display = "none";
 }
+let paperDefault = 1;
+let scissorsDefault = 2;
+let rockDefault = 3;
+let paperMainElement = document.getElementById("paper-img" + paperDefault);
+let scissorsMainElement = document.getElementById(
+  "scissor-img" + scissorsDefault
+);
+let rockMainElement = document.getElementById("rock-img" + rockDefault);
+let score = 0;
