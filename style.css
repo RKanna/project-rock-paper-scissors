@@ -359,6 +359,14 @@ body {
   justify-content: center;
   align-items: center;
 }
+.btn-win {
+  text-transform: uppercase;
+  color: var(--clr-radial-gradient-dark);
+  font-weight: 700;
+}
+.btn-win:hover {
+  color: var(--clr-rock-gradient-dark);
+}
 @media screen and (max-width: 998px) {
   .score-and-title {
     gap: 1rem;
